@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body bgcolor="#90ee90">
+<h2>
+<table border="2" align="center">
+    <tr><th>pid</th><th>pname</th><th>pcost</th><th>pmfdt</th><th>pexpdt</th></tr>
+    {% for rec in records %}
+        <tr><td>{{  rec.pid }}</td><td>{{ rec.pname }}</td><td>{{ rec.pcost }}</td><td>{{ rec.pmfdt|date:'d-M-Y' }}</td><td>{{ rec.pexpdt|date:'d-M-Y' }}</td></tr>
+    {% endfor %}
+</table>
+    <center><a href="./mymart">click here to home</a></center>
+</h2>
+</body>
+</html>
